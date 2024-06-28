@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Preço do Álcool"
+        android:textColor="#981A1A"
+        android:textColorHint="#FF9800" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Digite o Preço do Álcool"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Preço da Gasolina"
+        android:textColor="#28627C"
+        android:textColorHint="#009688" />
+
+    <EditText
+        android:id="@+id/etAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Digite o Preço da Gasolina"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#703347" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Média em (Km) do Veiculo"
+        android:textColor="#248E9C"
+        android:textColorHint="#9C27B0" />
+
+    <EditText
+        android:id="@+id/etMedveic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Digite a média de consumo / Km"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#03A9F4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Tipo de Piso"
+        android:textColor="#FFC107"
+        android:textColorHint="#3F51B5" />
+
+    <EditText
+        android:id="@+id/etTippiso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Digite o Tipo de Piso"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#296971" />
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDescresultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="right"
+            android:text="Preço por Km/Média/Vlr. Litro R$:"
+            android:textColor="#2196F3"
+            android:textColorHint="#E91E63"
+            android:textColorLink="#14DC1E"
+            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/RResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:textColorLink="#14DC1E"
+        android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResultadoEscrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:textAlignment="center"
+
+        android:textColorLink="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="25dp">
+    <TableRow
+        android:id="@+id/tablerow"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content">
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:text="CALCULAR" />
+
+        <Button
+            android:id="@+id/btLimpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:text="LIMPAR" />
+
+        <Button
+            android:id="@+id/btTiproad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:text="TIPO DE PISO" />
+    </TableRow>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top">
+        <TextView
+            android:id="@+id/tvPercentual"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textColorLink="#FF9800"
+            android:text="% Álcool x Gasolina"
+            android:textSize="30dp"/>
+
+         <com.ekn.gruzer.gaugelibrary.HalfGauge
+            android:id="@+id/halfGauge"
+             android:layout_width="347dp"
+             android:layout_height="246dp"
+             android:layout_marginStart="30dp"
+             android:layout_marginTop="8dp"
+             android:layout_marginEnd="8dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</LinearLayout>
